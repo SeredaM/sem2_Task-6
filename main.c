@@ -37,9 +37,11 @@ int main()
        num[l]='\0';
        strcat(polsk,num);
        k+=l;
-       push_num(&X,-atof(num));
-       strcat(polsk," - ");
-       k+=3;
+       push_num(&X,atof(num));
+       strcat(polsk," ");
+       push_op(&Y,'-');
+       pr_op='-';
+       k+=1;
        }
        else
         {
@@ -83,7 +85,7 @@ int main()
               i++;
             }
       }
-      if (s[i]==')')
+     if (s[i]==')')
       {
           while (Y->op!='(')
           {
@@ -102,7 +104,8 @@ int main()
             i++;
             if (s[i]=='-')
             {
-
+               push_num(&X,0);
+               i++;
                j=i;
                do
                {
@@ -113,19 +116,19 @@ int main()
                }
                 while (isnum(s[j])==true);
                 l=0;
-                i++;
                 while (i<j)
                 {
                   num[l]=s[i];
                   l++;
                   i++;
                 }
-
+       num[l]='\0';
        strcat(polsk,num);
-       strcat(polsk," - ");
-       k+=3;
+       strcat(polsk," ");
+       push_op(&Y,'-');
+       k+=1;
        k+=l;
-       push_num(&X,-atof(num));
+       push_num(&X,atof(num));
             }
 
       }

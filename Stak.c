@@ -105,7 +105,10 @@ void make_operation (numbers **X, operators **Y)
 {
     double x,y;
     y=pop_num(X);
+    if (*X!=NULL)
     x=pop_num(X);
+    else
+    x=0;
     switch(pop_op(Y))
     {
     case '+':

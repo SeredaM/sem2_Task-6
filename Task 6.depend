@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1624935783 source:c:\users\mixa\desktop\Лабы прога\task 6\main.c
+1624988269 source:c:\users\mixa\desktop\Лабы прога\task 6\main.c
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>
 	"Stack.h"
 
-1624932674 source:c:\users\mixa\desktop\Лабы прога\task 6\stak.c
+1624987396 source:c:\users\mixa\desktop\Лабы прога\task 6\stak.c
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>
